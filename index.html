@@ -20,22 +20,49 @@
       p, ul li { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
       a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
       a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
-      #monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
-      #about { width: 360px; padding: 0 0 0 150px; margin: -35px 50px 0 auto !important; }
-      @media (max-width: 767px) {
-        #monogram { position: relative; width: auto; padding: 20px; margin: 0; }
-        #about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
-        background-image { opacity: 0.2; }
-      }
+      #monogram { width: 120px; padding: 30px 0 0 0; }
+      #about { width: 400px; padding: 0 0 0 150px; margin: -80px 50px 0 auto !important; }
 
       ul {
         list-style: none;
+        margin: 36px 0;
       }
       ul li {
-        margin-bottom: 12px;
+        margin-bottom: 36px;
       }
       ul.tight li {
         margin-bottom: 0;
+      }
+      .fa {
+        width: 18px;
+      }
+
+      @media (max-width: 767px) {
+        #monogram {
+          position: relative;
+          margin: 0 auto;
+        }
+        #monogram img {
+          width: 100%;
+        }
+        #about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
+        body {
+          text-align: center;
+        }
+        ul {
+          list-style: none;
+          margin: 24px 0;
+        }
+        ul li {
+          margin-bottom: 24px;
+        }
+      }
+      @media (min-width: 768px) {
+        #monogram { position: relative; width: auto; padding: 20px; margin: 0; }
+        #about .container {
+          background-color: rgba(0,0,0,0.6);
+          padding: 26px;
+        }
       }
     </style>
 
@@ -49,6 +76,7 @@
 
 <!-- swap out for information about yourself -->
 <div id="about">
+  <div class='container'>
   <p>
   Kris Raghavan is the founder and principal of <a href="http://krisraghavan.com">Lorem Ipsum Consulting</a>.
   </p>
@@ -62,6 +90,16 @@
     <i class="fa fa-group"></i>
     MBA, Rutgers
     </li>
+
+    <li>
+    <i class="fa fa-inbox"></i>
+    <a href='mailto:contact@krisraghavan.com'>Email</a>
+    </li>
+    <li>
+    <i class="fa fa-linkedin-square"></i>
+    <a href='http://www.linkedin.com/in/krisraghavan' target='_blank'>LinkedIn</a>
+    </li>
+
   </ul>
 
   <ul>
@@ -78,18 +116,7 @@
     Help strategic customers build better products and improve yield entitlement, leading to higher margins, significant adoption and market share
     </li>
   </ul>
-
-  <ul>
-    <li>
-    <i class="fa fa-inbox"></i>
-    <a href='mailto:contact@krisraghavan.com'>Email</a>
-    </li>
-    <li>
-    <i class="fa fa-linkedin-square"></i>
-    <a href='http://www.linkedin.com/in/krisraghavan' target='_blank'>LinkedIn</a>
-    </li>
-  </ul>
-
+  </div>
 </div>
 
 <!--include jquery & backstretch-->
@@ -99,7 +126,10 @@
 $(function(){
      $(window).resize(function(){
          if($(this).width() >= 767){
-             $.backstretch("bg.jpg", {speed: 150});
+         $.backstretch([
+           "headshot.jpg",
+           "panorama.jpg"
+           ]);
          }
       })
       .resize();//trigger resize on page load
