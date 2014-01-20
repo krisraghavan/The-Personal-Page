@@ -17,35 +17,50 @@
     <style>
       * { padding: 0; margin: 0; }
       body { background-color: #333; }
-      p, ul li { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
-      a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
+      p, ul li, h1 { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 1.5em; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+      a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
       a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
-      #monogram { width: 120px; padding: 30px 0 0 0; }
-      #about { width: 400px; padding: 0 0 0 150px; margin: -150px 20px 0 auto !important; }
 
       ul {
-        list-style: none;
-        margin: 36px 0;
+        margin: 20px 15px;
       }
       ul li {
-        margin-bottom: 36px;
+      }
+
+      ul.tight {
+        list-style: none;
+        margin: 20px 0;
+        font-weight: 100;
       }
       ul.tight li {
         margin-bottom: 0;
+        font-size: 26px;
       }
       .fa {
         width: 18px;
       }
 
+      #monogram {
+        font-weight: 100;
+        font-size: 64px;
+        float: right;
+        color: #FFF;
+        margin: 50px 30px 0;
+        line-height: 1em;
+      }
+
+      #about { 
+        width: 350px;
+        margin: 30px 30px !important;
+        float: left;
+      }
+
+      #about .container {
+        background-color: rgba(0,0,0,0.6);
+        padding: 20px;
+      }
+
       @media (max-width: 767px) {
-        #monogram {
-          position: relative;
-          margin: 0 auto;
-        }
-        #monogram img {
-          width: 100%;
-        }
-        #about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
         body {
           text-align: center;
         }
@@ -57,12 +72,8 @@
           margin-bottom: 24px;
         }
       }
+
       @media (min-width: 768px) {
-        #monogram { position: relative; width: auto; padding: 20px; margin: 0; }
-        #about .container {
-          background-color: rgba(0,0,0,0.6);
-          padding: 26px;
-        }
       }
     </style>
 
@@ -70,17 +81,13 @@
 
   <body>
 <!-- swap out for a logo -->
-<div id="monogram">
-  <img src="monogram.png" />
-</div>
+<h1 id="monogram">
+  Kris Raghavan
+</h1>
 
 <!-- swap out for information about yourself -->
 <div id="about">
   <div class='container'>
-  <p>
-  Kris Raghavan is the founder and principal of <a href="http://krisraghavan.com">Lorem Ipsum Consulting</a>.
-  </p>
-
   <ul class='tight'>
     <li>
     <i class="fa fa-map-marker"></i>
