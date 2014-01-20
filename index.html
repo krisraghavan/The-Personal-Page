@@ -29,7 +29,7 @@
 
       ul.tight {
         list-style: none;
-        margin: 20px 0;
+        margin: 10px 0;
         font-weight: 100;
       }
       ul.tight li {
@@ -45,12 +45,13 @@
         font-size: 64px;
         float: right;
         color: #FFF;
-        margin: 50px 30px 0;
+        margin: 50px 30px 0 0;
         line-height: 1em;
+        text-shadow: -1px 0 rgba(128,128,128,0.6), 0 1px rgba(128,128,128,0.6), 1px 0 rgba(128,128,128,0.6), 0 -1px rgba(128,128,128,0.6);
       }
 
       #about { 
-        width: 350px;
+        width: 400px;
         margin: 30px 30px !important;
         float: left;
       }
@@ -61,10 +62,20 @@
       }
       .pull-left { float: left; }
       .pull-right { float: right; }
+
+      .summary .headshot img {
+        height: 172px;
+        width: auto;
+      }
+      .summary .headshot {
+        margin: 0 20px 0;
+      }
       .summary {
+        overflow: hidden;
       }
       .resume {
         clear: both;
+        margin-left: 36px;
       }
 
       @media (max-width: 767px) {
@@ -99,7 +110,7 @@
       <div class='headshot pull-left'>
         <img src='images/headshot.jpg'>
       </div>
-      <div class='pull-right'>
+      <div class='pull-left'>
       <ul class='tight'>
         <li>
         <i class="fa fa-map-marker"></i>
